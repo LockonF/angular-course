@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Contact } from "./contact.dto";
 
 @Component({
@@ -8,12 +8,22 @@ import { Contact } from "./contact.dto";
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
-
   @Input()
   public contact: Contact;
+  @Output('onContactSelected')
+  public selectContact: EventEmitter<string>;
+
+  constructor() {
+    this.selectContact = new EventEmitter<string>();
+  }
+
 
   public ngOnInit() {
+  }
+
+  public onContactSelected() {
+    this.selectContact.emit('Hola ' +
+      this.contact.firstName + ' ' + this.contact.lastName)
   }
 
 }

@@ -15,4 +15,8 @@ export class AppComponent {
     this.contact.avatarUrl = 'https://www.snecsllc.com/wp-content/uploads/2012/11/Generic-Person-300x300.png';
     this.contact.birthday = new Date('1992/10/18');
   }
+
+  public alertContact(message: string) {
+    alert(message);
+  }
 }

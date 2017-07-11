@@ -1,5 +1,7 @@
-<span>Nombre: <strong>{{contact.firstName}} {{contact.lastName}} </strong></span>
-<br>
-<span>Cumpleaños: <strong>{{contact.birthday | date:'d-M-y'}}</strong></span>
-<br>
-<img src="{{contact.avatarUrl}}" alt="">
+<div (click)="onContactSelected()">
+  <span>Nombre: <strong>{{contact.firstName}} {{contact.lastName}} </strong></span>
+  <br>
+  <span>Cumpleaños: <strong>{{contact.birthday | date:'d-M-y'}}</strong></span>
+  <br>
+  <img src="{{contact.avatarUrl}}" alt="">
+</div>
