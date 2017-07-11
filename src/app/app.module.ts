@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
+import { RegisterModule } from './register/register.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { ContactComponent } from './contact/contact.component';
     ContactComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RegisterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
