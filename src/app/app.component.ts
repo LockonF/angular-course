@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Contact } from "./contact/contact.dto";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  contact: Contact;
+  constructor() {
+    this.contact = new Contact();
+    this.contact.firstName = 'Daniel';
+    this.contact.lastName = 'Franco';
+    this.contact.avatarUrl = 'https://www.snecsllc.com/wp-content/uploads/2012/11/Generic-Person-300x300.png';
+    this.contact.birthday = new Date('1992/10/18');
+  }
 }
