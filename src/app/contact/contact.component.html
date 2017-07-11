@@ -1,3 +1,5 @@
-<span> Hola, me llamo {{contact.firstName}} {{contact.lastName}} </span>
+<span>Nombre: <strong>{{contact.firstName}} {{contact.lastName}} </strong></span>
 <br>
-<span> Mi cumpleaños es el {{contact.birthday | date:'d-M-y'}}</span>
+<span>Cumpleaños: <strong>{{contact.birthday | date:'d-M-y'}}</strong></span>
+<br>
+<img src="{{contact.avatarUrl}}" alt="">
