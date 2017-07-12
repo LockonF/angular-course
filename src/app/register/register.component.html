@@ -1,15 +1,27 @@
-<div class="row">
-  <md-input-container>
-    <input mdInput placeholder="Nombre">
-  </md-input-container>
+<div class="row center-md center-lg">
+  <form [formGroup]="registerForm">
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Nombre" formControlName="firstName">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Apellido Paterno" formControlName="lastName">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Telefono" formControlName="phone">
+      </md-input-container>
+    </div>
+    <button md-raised-button [disabled]="!registerForm.valid"> <span> Enviar</span></button>
+  </form>
 </div>
 <div class="row">
-  <md-input-container>
-    <input mdInput placeholder="Apellido Paterno">
-  </md-input-container>
+<span>
+{{registerForm.value | json}}
+</span>
+
 </div>
-<div class="row">
-  <md-input-container>
-    <input mdInput placeholder="Apellido Materno">
-  </md-input-container>
-</div>
+
