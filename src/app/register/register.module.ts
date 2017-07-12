@@ -4,6 +4,7 @@ import { RegisterComponent } from './register.component';
 import { MdInputModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MdButtonModule} from '@angular/material';
+import { FileUploadModule } from 'ng2-file-upload';
 
 
 
@@ -12,7 +13,8 @@ import {MdButtonModule} from '@angular/material';
     CommonModule,
     MdInputModule,
     ReactiveFormsModule,
-    MdButtonModule
+    MdButtonModule,
+    FileUploadModule
   ],
   declarations: [RegisterComponent],
   exports: [RegisterComponent]
