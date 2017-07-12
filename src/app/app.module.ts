@@ -6,7 +6,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { RegisterModule } from './register/register.module';
-import { MdButtonModule } from "@angular/material";
+import { MdButtonModule } from '@angular/material';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MdButtonModule } from "@angular/material";
     BrowserModule,
     BrowserAnimationsModule,
     RegisterModule,
-    MdButtonModule
+    MdButtonModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

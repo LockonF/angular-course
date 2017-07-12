@@ -1,9 +1,9 @@
 export class Contact {
   private _firstName: string;
   private _lastName: string;
-  private _avatarUrl: string;
+  private _avatarUrl?: string;
   private _phone: string;
-  private _birthday: Date;
+  private _birthday?: Date;
 
   get firstName(): string {
     return this._firstName;
@@ -43,5 +43,14 @@ export class Contact {
 
   set birthday(value: Date) {
     this._birthday = value;
+  }
+
+  public static toBackendFormat(contact: Contact) {
+    return {
+      'first_name': contact.firstName,
+      'last_name': contact.lastName,
+      'avatar_url': contact.avatarUrl,
+      'phone': contact.phone
+    };
   }
 }

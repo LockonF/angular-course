@@ -1,4 +1,3 @@
-<div class="row center-md center-lg">
   <form [formGroup]="registerForm">
     <div class="row">
       <md-input-container>
@@ -16,9 +15,6 @@
       </md-input-container>
     </div>
     <div class="row">
-      <button md-raised-button [disabled]="!registerForm.valid"> <span> Enviar</span></button>
+      <button md-raised-button [disabled]="!registerForm.valid" (click)="postForm()"> <span> Enviar</span></button>
     </div>
-
   </form>
-</div>
-<div class="row">

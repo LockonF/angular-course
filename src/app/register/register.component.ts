@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { RegisterService } from './register.service';
+import { Contact } from "../contact/contact.dto";
 
 @Component({
   selector: 'app-register',
@@ -9,7 +11,9 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 export class RegisterComponent implements OnInit {
 
   public registerForm: FormGroup ;
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private registerService: RegisterService,
+    private formBuilder: FormBuilder) {
     this.registerForm = this.formBuilder.group({
       'firstName': [, Validators.required],
       'lastName': [, Validators.required],
@@ -18,9 +22,16 @@ export class RegisterComponent implements OnInit {
   }
 
   public ngOnInit() {
-    // Reactive forms
-    this.registerForm.valueChanges.subscribe((value: any) => {
-      console.log(value);
+
+  }
+
+  public postForm() {
+    let myRegister = new Contact();
+    myRegister = this.registerForm.value;
+    this.registerService.postForm(this.registerForm.value).subscribe((data: any) => {
+      console.log(data);
+    }, (error) => {
+      console.log(error);
     });
   }
 
