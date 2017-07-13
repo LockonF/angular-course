@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
   public selectContact: EventEmitter<string>;
 
   constructor() {
+    this.contact = new Contact();
     this.selectContact = new EventEmitter<string>();
   }
 

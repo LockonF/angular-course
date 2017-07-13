@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
+<<<<<<< Updated upstream
 import { Contact } from "./contact/contact.dto";
+=======
+import { Contact } from './contacts/contact.dto';
+>>>>>>> Stashed changes
 
 @Component({
   selector: 'app-root',

@@ -1,0 +1,21 @@
+  <form [formGroup]="registerForm">
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Nombre" formControlName="firstName">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Apellido Paterno" formControlName="lastName">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <md-input-container>
+        <input mdInput placeholder="Telefono" formControlName="phone">
+      </md-input-container>
+    </div>
+    <div class="row">
+      <button md-raised-button [disabled]="!registerForm.valid" (click)="postForm()"> <span> Enviar</span></button>
+    </div>
+  </form>
+  <button md-raised-button routerLink="/contact">Ir a Contacto</button>
